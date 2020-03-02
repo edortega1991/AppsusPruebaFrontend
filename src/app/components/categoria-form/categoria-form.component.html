@@ -1,0 +1,28 @@
+<div class="col md-4 offset-md-1">
+    <div class="card">
+        <div class="card-body">
+            <form >
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" name="nombre" [(ngModel)]="categoria.nombre" placeholder="Nombre" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="">Descripción</label>
+                    <textarea name="descripcion" [(ngModel)]="categoria.descripcion" placeholder="Descripción" rows="2" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Usuario</label>
+                    <input type="number" name="user_id" [(ngModel)]="categoria.user_id" placeholder="usuario" class="form-control" >
+                </div>
+                <button class="btn btn-success" (click)=  "editar ? updateCategoria() : saveNewCategoria()">
+                    guardar
+                </button>
+
+            </form>
+        </div>
+    </div>
+    
+
+    
+</div>
+

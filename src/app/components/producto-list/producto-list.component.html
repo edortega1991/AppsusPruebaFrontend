@@ -1,0 +1,40 @@
+<div class="col-md4" >
+
+    <!--<div class="card text-center">
+        <div class="card-header">
+            {{producto.nombre}}
+        </div>
+
+    </div>-->
+    <!------------------------------------------------------->
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Categoria</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productos">
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.nombreCategoria}}</td>
+            <td>{{producto.cantidad}}</td>
+            <td>{{producto.precio}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteProducto(producto.id)" style="margin: 2px ;" ><i class="far fa-trash-alt"></i></button>
+              <button class="btn btn-danger" [routerLink]="['/productos/edit',producto.id]"><i class="fas fa-edit"></i>  </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+
+    <!------------------------------------------------------->
+
+</div>

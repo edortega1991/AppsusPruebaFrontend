@@ -1,0 +1,35 @@
+<div class="col-md4" >
+
+    
+    <table  class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let categoria of categorias">
+            <td>{{categoria.nombre}}</td>
+            <td>{{categoria.descripcion}}</td>
+            <td>
+              <div class="container">
+                <button class="btn btn-danger" (click)="deleteCategorias(categoria.id)"><i class="far fa-trash-alt" style="margin: 1p;"></i></button>
+                <button class="btn btn-danger" [routerLink]="['/categoria/edit',categoria.id]" ><i class="fas fa-edit" ></i>  </button>
+                <button class="btn btn-danger"[routerLink]="['/productos/add',categoria.id]" ><i class="fas fa-plus" style="margin: 1p;"></i>  </button>
+              </div>
+              
+              <!--<button class="btn btn-danger"[routerLink]="['/productos',categoria.id]" ><i class="fas fa-list" style="margin: 1p;"></i>  </button>-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+
+    <!------------------------------------------------------->
+
+</div>
