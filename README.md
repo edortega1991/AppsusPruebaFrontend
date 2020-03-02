@@ -1,4 +1,12 @@
 # Cliente
+para lanzar el proyecto:
+ingresar a server:
+npm run dev
+
+despues ingresar a cliente:
+ng serve -o
+
+# Cliente
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
 
